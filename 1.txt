@@ -1,0 +1,7 @@
+sudo yum install docker  
+service docker status
+service docker stop
+service docker start
+docker -help
+docker images
+docker run  -i -t hello-world
