@@ -1,0 +1,21 @@
+Train:
+
+http://3.209.93.191:1112/dataset/getAttributes?Training=80&Testing=20&Hold=0&file=IrisData3&userId=userID
+http://3.209.93.191:1112/dataset/sendAttributes?userId=userID
+{
+	"Petal length":true,
+	"Petal width":true,
+	"Sepal width":true,
+	"Sepal length":false
+}
+http://3.209.93.191:1112/dataset/trainModel?classifier=decision_tree&userId=userID
+http://3.209.93.191:1112/dataset/trainModel?classifier=knn_classifier&userId=userID
+http://3.209.93.191:1112/save?modelName=DarshitNathani28&userId=userID
+Predict:
+
+http://3.209.93.191:1112/dsw/predict?modelName=DarshitNathani28
+{
+	"rowData":[3.4, 5.6, 2.4],
+	"Classification":[0.0, 1.0, 2.0],
+	"Precision":[1.0, 0.9166666666666666, 1.0]
+}
